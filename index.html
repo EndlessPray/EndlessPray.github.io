@@ -1,0 +1,71 @@
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<html>
+	<head>
+		<label>닉네임 : </label>
+		<input type='text' name='nickname'></input>
+		<input type='button' onclick='MiliInspec()' value='검사시작'></input></br>
+		
+		<input type='checkbox' name='wordSave'>세구18</input>
+		//원대, 카드, 보석, 유물, 각인
+	</head>
+	<body>
+		<table class="tg">
+			<thead>
+				<tr>
+					<th class="tg-0lax" colspan="2">촥촤락촥촥</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="tg-0lax">직업</td>
+					<td class="tg-0lax">블레이드</td>
+				</tr>
+				<tr>	
+					<td class="tg-0lax">템렙</td>
+					<td class="tg-0lax">1526</td>
+				</tr>
+				<tr>
+					<td class="tg-0lax">원렙</td>
+					<td class="tg-0lax">160</td>
+				</tr>
+				<tr>
+					<td class="tg-0lax">각인</td>
+					<td class="tg-0lax">33333</td>
+				</tr>
+				<tr>
+					<td class="tg-0lax">보석</td>
+					<td class="tg-0lax">7홍x6<br>7멸x5</td>
+				</tr>
+				<tr>
+					<td class="tg-0lax">카드</td>
+					<td class="tg-0lax">세구 18</td>
+				</tr>
+			</tbody>
+		</table>
+		<script>
+			function MiliInspec() {
+				fetch("https://lostark.game.onstove.com/Profile/Character/%EC%B4%A5%EC%B4%A4%EB%9D%BD%EC%B4%A5%EC%B4%A5", {
+					method: "POST",
+					headers: {
+						"Accept": "*/*",
+						"Accept-Encoding": "ko-KR,ko;q=0.9,en-US;q=0.8,en=0.7",
+						"Access-Control-Request-Headers": "content-type",
+						"Access-Control-Request-Method": "POST",
+						"Connection": "keep-alive",
+						"Host": "localhost:4000",
+						"Origin": "http://localhost:3000",
+						"Referer": "http://localhost:3000/"
+					},
+				}).then((response) => console.log(response));
+			}
+		</script>
+	</body>
+</html>
